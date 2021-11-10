@@ -44,5 +44,28 @@
     </p>
   </div>
   <script src="lib/puzzle.js"></script>
+  <script src="lib/confetti.js"></script>
+  <script>
+    const checkIfPlayerWins = () => {
+        const tilesOrder = Array.from(document.querySelectorAll('td')).map(e => Number.parseInt(e.innerHTML, 10));
+        if (tilesOrder.join() === "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,NaN") {
+          alert("Laimejai!");
+          const start = () => {
+              setTimeout(function () {
+                confetti.start()
+              }, 1000); // 1000 is time that after 1 second start the confetti ( 1000 = 1 sec)
+            };
+            start();
+        }
+      };
+
+      const stop = () => {
+        setTimeout(function () {
+          confetti.stop()
+        }, 5000); // 5000 is time that after 5 second stop the confetti ( 5000 = 5 sec)
+      };
+      // after this here we are calling both the function so it works
+      // stop();
+  </script>
 </body>
 </html>
