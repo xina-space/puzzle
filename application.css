@@ -1,0 +1,55 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #192a51;
+}
+
+table {
+  width: 428px;
+  border: 10px solid #f5e6e8;
+  background: #f5e6e8;
+}
+
+tr {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+td {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  margin: 1px;
+  background: #967aa1;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #f5e6e8;
+}
+
+td:hover{
+  background: #d5c6e0;
+  color: #192a51;
+}
+
+.empty {
+  background: #192a51;
+}
+
+button {
+  margin-top: 40px;
+}
+
+.hint {
+  margin-top: 16px;
+  opacity: 0;
+  transition: .3s opacity ease;
+}
+
+.hint.active {
+  opacity: 1;
+}
